@@ -29,7 +29,7 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
-        this.backgroundPool = new cc.NodePool('background');
+        //this.backgroundPool = [];
         this.block=0;
     },
 
@@ -47,6 +47,14 @@ cc.Class({
             var c_pos = this.camera.parent.convertToNodeSpaceAR(w_pos);
             this.camera.x=c_pos.x;
 
+        }
+        if(this.actor.x+this.actor.width>480+this.block*960){
+            this.block++;
+            var newBackground  = null;
+            newBackground = cc.instantiate(this.backgroundPrefab);
+            this.node.addChild(newBackground);
+            // 为星星设置一个随机位置
+            newBackground.setPosition(cc.v2(480+this.block*960,320));
         }
 
 
