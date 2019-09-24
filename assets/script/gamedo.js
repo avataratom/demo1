@@ -13,8 +13,8 @@ cc.Class({
 
     properties: {
         backgroundPrefab: {
-            default: null,
-            type: cc.Prefab
+            default:[],
+            type: [cc.Prefab]
         },
         actor: {
             default: null,
@@ -28,17 +28,17 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
+    onLoad() {
         //this.backgroundPool = [];
         this.block=0;
     },
 
-    start () {
+    start() {
         // spawn star
         //this.spawnNewStar();
     },
 
-    update (dt) {
+    update(dt) {
         if(this.actor.x+this.actor.width>480){
             //this.creatNewBackground();
 
@@ -51,7 +51,7 @@ cc.Class({
         if(this.actor.x+this.actor.width>480+this.block*960){
             this.block++;
             var newBackground  = null;
-            newBackground = cc.instantiate(this.backgroundPrefab);
+            newBackground = cc.instantiate(this.backgroundPrefab[this.block-1]);
             this.node.addChild(newBackground);
             // 为星星设置一个随机位置
             newBackground.setPosition(cc.v2(480+this.block*960,320));
@@ -59,21 +59,6 @@ cc.Class({
 
 
     },
-    creatNewBackground(){
-        var newback = null;
-        // 使用给定的模板在场景中生成一个新节点
-        if (this.starPool.size() > 0) {
-            newback = this.starPool.get(this); // this will be passed to Star's reuse method
-        } else {
-            newback = cc.instantiate(this.starPrefab);
-        }
-        // 将新增的节点添加到 Canvas 节点下面
-        this.node.addChild(newback);
-        // 为星星设置一个随机位置
-        newback.setPosition(this.getNewStarPosition());
-        // pass Game instance to star
-        newback.getComponent('Star').init(this);
-        // start star timer and store star reference
-    }
+
 
 });

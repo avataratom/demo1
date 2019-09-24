@@ -149,15 +149,6 @@ cc.Class({
 
             }
 
-            // this.node.y = other.world.aabb.yMax;
-
-            // var offset = cc.v2(other.world.aabb.x - other.world.preAabb.x, 0);
-
-            // var temp = cc.affineTransformClone(self.world.transform);
-            // temp.tx = temp.ty = 0;
-
-            // offset = cc.pointApplyAffineTransform(offset, temp);
-            // this.node.x += offset.x;
         }
     },
 
@@ -170,6 +161,9 @@ cc.Class({
         if (other.touchingX&&this.touchingNumber===0) {
             this.collisionX = 0;
             other.touchingX = false;
+            other.touchingY = false;
+            this.collisionY = 0;
+            this.jumping = true;
         }
         else if (other.touchingY&&this.touchingNumber===0) {
             other.touchingY = false;
@@ -210,11 +204,6 @@ cc.Class({
             this.speed.x = 0;
         }
 
-        this.prePosition.x = this.node.x;
-        this.prePosition.y = this.node.y;
-
-        this.preStep.x = this.speed.x * dt;
-        this.preStep.y = this.speed.y * dt;
 
         this.node.x += this.speed.x * dt;
         this.node.y += this.speed.y * dt;
