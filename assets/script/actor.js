@@ -5,10 +5,13 @@ cc.Class({
     properties: {
         speed: cc.v2(0, 0),
         maxSpeed: cc.v2(2000, 2000),
-        gravity: -1000,
+        gravity: -500,
         drag: 1000,
         direction: 0,
-        jumpSpeed: 300
+        jumpSpeed: 1000,
+        jumpDuration:0.3,
+        jumpHeight:500
+
     },
 
     // use this for initialization
@@ -19,12 +22,11 @@ cc.Class({
         this.collisionX = 0;
         this.collisionY = 0;
 
-        this.prePosition = cc.v2();
-        this.preStep = cc.v2();
-
+        this.jump=this.jumpAction();
         this.touchingNumber = 0;
         this.num=0;
         this.num_idle=0;
+        this.clickflag=false
     },
 
     onEnable: function () {
@@ -52,12 +54,23 @@ cc.Class({
             case cc.macro.KEY.up:
                 if (!this.jumping) {
                     this.jumping = true;
-                    this.speed.y = this.jumpSpeed;
+                    //this.speed.y = this.jumpSpeed;
+
+                    this.node.runAction(this.jump);
+                    this.clickflag=true;
+
                 }
                 break;
         }
     },
-
+    jumpAction:function(){
+        var jumpUp = cc.moveBy(this.jumpDuration, cc.v2(0, this.jumpHeight)).easing(cc.easeCubicActionOut());
+        // 下落
+        var jumpDown = cc.moveBy(this.jumpDuration, cc.v2(0, -this.jumpHeight-10)).easing(cc.easeCubicActionIn());
+        // 不断重复
+        var doplay=cc.sequence(jumpUp, jumpDown);
+        return cc.repeat(doplay,1);
+    },
     onKeyReleased: function (event) {
         var keyCode = event.keyCode;
         switch(keyCode) {
@@ -71,8 +84,6 @@ cc.Class({
     },
 
     onCollisionEnter: function (other, self) {
-
-
         this.touchingNumber ++;
         this.num_idle=180;
         // 1st step
@@ -113,10 +124,16 @@ cc.Class({
                 this.node.y = otherPreAabb.yMax - this.node.parent.y;
                 this.jumping = false;
                 this.collisionY = -1;
+                if(this.jump.isDone()===false){
+                    //this.node.stopAction(this.jump);
+                }
             }
             else if ((this.speed.y > 0||this.speed.x != 0) && (selfPreAabb.yMin < otherPreAabb.yMin)) {
                 this.node.y = otherPreAabb.yMin - selfPreAabb.height - this.node.parent.y;
                 this.collisionY = 1;
+                if(this.jump.isDone()===false){
+                    //this.node.stopAction(this.jump);
+                }
             }
 
             this.speed.y = 0;
@@ -182,6 +199,11 @@ cc.Class({
             var anim = this.getComponent(cc.Animation);
             anim.play("jump");
         }
+        if(this.jump.isDone===true ){
+            this.clickflag=false
+        }
+
+
 
         if (this.direction === 0) {
             if (this.speed.x > 0) {
@@ -206,7 +228,9 @@ cc.Class({
 
 
         this.node.x += this.speed.x * dt;
-        this.node.y += this.speed.y * dt;
+        if(this.clickflag===false) {
+            this.node.y += this.speed.y * dt;
 
+        }
     },
 });
