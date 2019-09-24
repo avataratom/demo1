@@ -22,7 +22,7 @@
       }
     ],
     "_active": true,
-    "_level": 2,
+    "_level": 1,
     "_components": [
       {
         "__id__": 6
@@ -199,7 +199,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "9e2362d5-ffc0-4ed0-9b4f-842825e973f4"
     },
     "fileId": "5dby7pRv1Pta7u6PGrKTGs",
     "sync": false
@@ -242,7 +242,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "9e2362d5-ffc0-4ed0-9b4f-842825e973f4"
     },
     "fileId": "2cKrrJtFpMm5anYe9HBBo1",
     "sync": false
