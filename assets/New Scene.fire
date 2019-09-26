@@ -613,7 +613,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 120.127,
-      "y": 377.01,
+      "y": 289.874,
       "z": 0
     },
     "_scale": {
@@ -686,12 +686,10 @@
       "x": 500,
       "y": 500
     },
-    "gravity": -1000,
+    "gravity": -500,
     "drag": 500,
     "direction": 0,
-    "jumpSpeed": 500,
-    "jumpDuration": 0.3,
-    "jumpHeight": 200,
+    "jumpSpeed": 300,
     "_id": "82B5q0J0BOObcPpnLo3sSV"
   },
   {
