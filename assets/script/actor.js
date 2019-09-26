@@ -183,6 +183,8 @@ cc.Class({
             this.jumping = true;
         }
         else if (other.touchingY&&this.touchingNumber===0) {
+            this.collisionX = 0;
+            other.touchingX = false;
             other.touchingY = false;
             this.collisionY = 0;
             this.jumping = true;
