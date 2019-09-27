@@ -176,7 +176,7 @@ cc.Class({
 
     update: function (dt) {
         this.num_idle++;
-        if (this.collisionY === 0) {
+        if (this.collisionY === 0||this.collisionY === 1) {
             this.speed.y += this.gravity * dt;
             if (Math.abs(this.speed.y) > this.maxSpeed.y) {
                 this.speed.y = this.speed.y > 0 ? this.maxSpeed.y : -this.maxSpeed.y;
