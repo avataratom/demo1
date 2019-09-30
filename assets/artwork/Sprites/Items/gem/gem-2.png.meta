@@ -1,11 +1,10 @@
 {
-  "ver": "2.3.1",
+  "ver": "2.2.0",
   "uuid": "a39a6e98-756d-4f7d-bf91-1642ca117749",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
-  "platformSettings": {},
   "subMetas": {
     "gem-2": {
       "ver": "1.0.4",

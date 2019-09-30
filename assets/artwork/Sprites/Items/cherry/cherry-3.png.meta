@@ -1,11 +1,10 @@
 {
-  "ver": "2.3.1",
+  "ver": "2.2.0",
   "uuid": "857298b7-6cf2-4cc5-9da0-8bb986fb40e9",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
-  "platformSettings": {},
   "subMetas": {
     "cherry-3": {
       "ver": "1.0.4",

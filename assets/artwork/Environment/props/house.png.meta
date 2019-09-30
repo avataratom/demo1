@@ -1,11 +1,10 @@
 {
-  "ver": "2.3.1",
+  "ver": "2.2.0",
   "uuid": "fff723fa-ea97-4e9b-9539-504836a9056c",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
-  "platformSettings": {},
   "subMetas": {
     "house": {
       "ver": "1.0.4",
