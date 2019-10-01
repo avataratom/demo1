@@ -90,7 +90,12 @@ cc.Class({
 
         if (cc.Intersection.rectRect(selfPreAabb, otherPreAabb)&&(selfPreAabb.yMin<otherPreAabb.yMax)) {
             if (this.speed.x < 0 && (selfPreAabb.xMax > otherPreAabb.xMax)&&(selfPreAabb.yMin<otherPreAabb.yMax)) {
-                this.node.x = otherPreAabb.xMax - this.node.parent.x;
+                if(other.node.group === 'Platform'){
+                    this.node.x = otherPreAabb.xMax - this.node.parent.x;
+                }
+                if(other.node.group === 'enemy'){
+                   // this.speed.y = 200;
+                }
                 this.collisionX = -1;
             }
             else if (this.speed.x > 0 && (selfPreAabb.xMin < otherPreAabb.xMin)&&(selfPreAabb.yMin<otherPreAabb.yMax)) {
@@ -110,16 +115,23 @@ cc.Class({
         otherPreAabb.y = otherAabb.y;
         if (cc.Intersection.rectRect(selfPreAabb, otherPreAabb)) {
             if ((this.speed.y < 0||this.speed.x != 0) && (selfPreAabb.yMax > otherPreAabb.yMax)) {
-                this.node.y = otherPreAabb.yMax - this.node.parent.y;
+                if(other.node.group === 'Platform') {
+                    this.node.y = otherPreAabb.yMax - this.node.parent.y;
+                    this.speed.y = 0;
+                }
+                if(other.node.group === 'enemy'){
+                    this.speed.y = 200;
+                }
                 this.jumping = false;
                 this.collisionY = -1;
             }
             else if ((this.speed.y > 0||this.speed.x != 0) && (selfPreAabb.yMin < otherPreAabb.yMin)) {
                 this.node.y = otherPreAabb.yMin - selfPreAabb.height - this.node.parent.y;
                 this.collisionY = 1;
+                this.speed.y = 0;
             }
 
-            this.speed.y = 0;
+
             other.touchingY = true;
         }
 
