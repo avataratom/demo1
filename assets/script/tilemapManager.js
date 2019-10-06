@@ -28,30 +28,27 @@ cc.Class({
     },
 
     // LIFE-CYCLE CALLBACKS:
-    onLoad: function () {
+    start () {
         let metaLayer = this.metaLayer;
-        let size = this.metaLayer._layerSize;
+        let size = this.metaLayer.getLayerSize();
         for (let i = 0; i < size.width; i++) {
             for (let j = 0; j < size.height; j++) {
                 let n = metaLayer.getTileGIDAt(i, j);
                 console.log(n);
                 if (n != 0) {
                     console.log(i, j);
-                    let x = -7680 * 0.5 + i * 16 + 8;
-                    let y = -240 * 0.5 + j * 16 - 16 * 4 + 8;
+                    let x = i * 16 + 8;
+                    let y = 240 - (j * 16 + 8);
                     // 加碰撞盒子
                     let p = this.metaLayer.node.parent.addComponent(cc.BoxCollider);
                     p.offset.set(cc.v2(x, y));
                     p.size.width = 16;
                     p.size.height = 16;
+                    console.log(p);
                 }
             }
         }
-    },
-
-    start () {
-
-    },
+    }
 
 
 });

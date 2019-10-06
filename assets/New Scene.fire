@@ -50,8 +50,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.27132086548953405,
-      "y": 0.27132086548953405,
+      "x": 1.9453098948245664,
+      "y": 1.9453098948245664,
       "z": 1
     },
     "_quat": {
@@ -775,13 +775,13 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0,
+      "y": 0
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 3840,
-      "y": 120,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -835,8 +835,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0,
+      "y": 0
     },
     "_position": {
       "__type__": "cc.Vec3",
@@ -862,7 +862,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "groupIndex": 0,
-    "_id": "65J6C3lWJAnZ+ctr645eV0"
+    "_id": "78264qkUVAUItp5gxKwhAy"
   },
   {
     "__type__": "cc.TiledLayer",
@@ -872,7 +872,7 @@
       "__id__": 21
     },
     "_enabled": true,
-    "_id": "00HT34hw9KpbRKCy/muxAp"
+    "_id": "d25SQPlFpHDZFBzjkYNWbz"
   },
   {
     "__type__": "cc.Node",
@@ -905,8 +905,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0,
+      "y": 0
     },
     "_position": {
       "__type__": "cc.Vec3",
@@ -932,7 +932,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "groupIndex": 0,
-    "_id": "b3cYL+Q5lCqoXq1HkhH8N3"
+    "_id": "d8bl9VdAlEDJC2jkQHv30W"
   },
   {
     "__type__": "cc.TiledLayer",
@@ -942,7 +942,7 @@
       "__id__": 23
     },
     "_enabled": true,
-    "_id": "3e6jPKHR9PD4JAnQ9K6hag"
+    "_id": "c1GXLV7EJCKZpNefDxbc+M"
   },
   {
     "__type__": "cc.Node",
@@ -975,8 +975,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0,
+      "y": 0
     },
     "_position": {
       "__type__": "cc.Vec3",
@@ -1002,7 +1002,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "groupIndex": 0,
-    "_id": "05V7c3zXlH66QufDaLYiAx"
+    "_id": "ddc6mmzl1AjY5KxLB4Wn66"
   },
   {
     "__type__": "cc.TiledLayer",
@@ -1012,7 +1012,7 @@
       "__id__": 25
     },
     "_enabled": true,
-    "_id": "b5uNAMdw1M56Cy76VHeuv/"
+    "_id": "f5W/AR9N9CEaI3eQj0zMBF"
   },
   {
     "__type__": "cc.TiledMap",
