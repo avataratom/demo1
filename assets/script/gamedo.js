@@ -13,8 +13,8 @@ cc.Class({
 
     properties: {
         backgroundPrefab: {
-            default:[],
-            type: [cc.Prefab]
+            default:null,
+            type: cc.Prefab
         },
         actor: {
             default: null,
@@ -39,22 +39,18 @@ cc.Class({
     },
 
     update(dt) {
-        if(this.actor.x+this.actor.width>480){
-            //this.creatNewBackground();
-
-
+        if(this.actor.x>192){
             var w_pos = this.actor.convertToWorldSpaceAR(cc.v2(0, 0));
             var c_pos = this.camera.parent.convertToNodeSpaceAR(w_pos);
             this.camera.x=c_pos.x;
 
         }
-        if(this.actor.x+this.actor.width>480+this.block*960){
+        if(this.actor.x>this.block*384){
             this.block++;
             var newBackground  = null;
-            newBackground = cc.instantiate(this.backgroundPrefab[this.block-1]);
+            newBackground = cc.instantiate(this.backgroundPrefab);
             this.node.addChild(newBackground);
-            // 为星星设置一个随机位置
-            newBackground.setPosition(cc.v2(480+this.block*960,320));
+            newBackground.setPosition(cc.v2(192+this.block*384,120));
         }
 
 

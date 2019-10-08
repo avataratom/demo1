@@ -12,12 +12,12 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "background05",
+    "_name": "background",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
     "_active": true,
-    "_level": 1,
+    "_level": 2,
     "_components": [
       {
         "__id__": 2
@@ -36,8 +36,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 960,
-      "height": 640
+      "width": 384,
+      "height": 240
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -46,8 +46,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 4321.142,
-      "y": 322.639,
+      "x": 192,
+      "y": 120,
       "z": 0
     },
     "_scale": {
@@ -104,9 +104,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "d003d857-2829-4338-9be1-33b47bfa9727"
+      "__id__": 0
     },
-    "fileId": "65WSzilyxCdp4tTFwo8dOs",
+    "fileId": "a4Pq57L+9F3bbflA5O10WG",
     "sync": false
   }
 ]
