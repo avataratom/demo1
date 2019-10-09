@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "death",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.85,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": "1",
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "516dfb5b-1919-4003-8731-265ac88c2783"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "f3304d90-f8e9-4f0a-8716-d987f26fce0a"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "0124cdf3-eba1-4bb4-8f9a-55ffad4b9592"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "5cd10cd0-50b5-4861-b028-a8474756eb41"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "9aaa7bee-a458-490d-807b-77eb8772b1a0"
+            }
+          },
+          {
+            "frame": 0.8333333333333334,
+            "value": {
+              "__uuid__": "b5856a73-a4a3-481a-9998-2594f1852770"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
