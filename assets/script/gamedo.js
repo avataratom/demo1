@@ -39,7 +39,7 @@ cc.Class({
     },
 
     update(dt) {
-        if(this.actor.x>192){
+        if(this.actor.x>0){
             var w_pos = this.actor.convertToWorldSpaceAR(cc.v2(0, 0));
             var c_pos = this.camera.parent.convertToNodeSpaceAR(w_pos);
             this.camera.x=c_pos.x;
