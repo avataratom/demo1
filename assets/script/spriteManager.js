@@ -39,10 +39,19 @@ cc.Class({
         //     }
         // },
 
-        prefabSprite:{
+        items:{
             default:[],
             type:[Item]
         },
+        frogPrefab:{
+            default:null,
+            type:cc.Prefab
+        },
+        opossumPrefab:{
+            default:null,
+            type:cc.Prefab
+        }
+
 
 
 
@@ -53,7 +62,11 @@ cc.Class({
     // onLoad () {},
 
     start () {
-
+        for (var i = 0; i < this.items.length; ++i) {
+            var item = cc.instantiate(this.items[i].spritePrefab);
+            this.node.addChild(item);
+            item.setPosition(this.items[i].vector);
+        }
     },
 
     // update (dt) {},
