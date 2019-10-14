@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "4556691a-ce5a-49a3-9b86-707c7d3d4b8c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "jiguan1效果": {
+      "ver": "1.0.4",
+      "uuid": "aefbac3d-3206-4570-98a4-b3b5e43e4333",
+      "rawTextureUuid": "4556691a-ce5a-49a3-9b86-707c7d3d4b8c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 2,
+      "offsetY": 0,
+      "trimX": 6,
+      "trimY": 2,
+      "width": 54,
+      "height": 43,
+      "rawWidth": 62,
+      "rawHeight": 47,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
